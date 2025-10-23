@@ -1,40 +1,33 @@
 # File: lib/todo_list.py
+
 class TodoList:
     def __init__(self):
-        pass
+        self._tasks = []
 
     def add(self, todo):
-        # Parameters:
-        #   todo: an instance of Todo
-        # Returns:
-        #   Nothing
-        # Side-effects:
-        #   Adds the todo to the list of todos
-        pass
+        self._tasks.append(todo)
 
+    def all(self):
+        return self._tasks
+    
     def incomplete(self):
-        # Returns:
-        #   A list of Todo instances representing the todos that are not complete
-        not_done_list = ??.appened(not_done)
-        return list(not_done_list)
         
+        if False in self._tasks:
+            return self._tasks
+        else:
+            print("skejdbhjebeu")
 
     def complete(self):
-        # Returns:
-        #   A list of Todo instances representing the todos that are complete
-
-        done_list = ??.appened(done)
-        return list(done_list)
+        if True in self._tasks:
+            return self._tasks
+        return
         
 
     def give_up(self):
-        # Returns:
-        #   Nothing
-        # Side-effects:
-        #   Marks all todos as complete
-
-        for False in self.task:
-            if False not in self.task:
-                return
-            else:
-                self.task.mark_complete()
+        if False in self._tasks:
+            self._tasks = self._tasks
+        elif True in self._tasks:
+            return
+        else:
+            return "There Are No Tasks In Your Todo List"
+        pass
