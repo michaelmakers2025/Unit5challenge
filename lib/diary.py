@@ -11,16 +11,13 @@ class TodoList:
         return self._tasks
     
     def incomplete(self):
-        
-        if False in self._tasks:
-            return self._tasks
-        else:
-            print("skejdbhjebeu")
 
+        return [task for task in self._tasks if not task.status]
+    
     def complete(self):
-        if True in self._tasks:
-            return self._tasks
-        return
+
+        return [task for task in self._tasks if task.status]
+
         
 
     def give_up(self):
