@@ -21,10 +21,6 @@ class TodoList:
         
 
     def give_up(self):
-        if False in self._tasks:
-            self._tasks = self._tasks
-        elif True in self._tasks:
-            return
-        else:
-            return "There Are No Tasks In Your Todo List"
-        pass
+
+        for task in self._tasks:
+            task.status = True

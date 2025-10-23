@@ -77,3 +77,27 @@ def test_get_multiple_todos_that_are_complete():
     t_list.add(todo2)
     t_list.add(todo3)
     assert t_list.complete() == [todo2, todo3]
+
+def test_give_up_marks_all_tasks_complete():
+    t_list = TodoList()
+    todo = Todo("todo")
+    todo2 = Todo("todo2")
+    todo3 = Todo("todo3")
+    t_list.add(todo)
+    t_list.add(todo2)
+    t_list.add(todo3)
+    t_list.give_up()
+    assert t_list.complete() == [todo, todo2, todo3]
+
+
+def test_give_up_with_one_already_complete():
+    t_list = TodoList()
+    todo = Todo("todo")
+    todo2 = Todo("todo2")
+    todo3 = Todo("todo3")
+    t_list.add(todo)
+    t_list.add(todo2)
+    t_list.add(todo3)
+    todo2.mark_complete()
+    t_list.give_up()
+    assert t_list.complete() == [todo, todo2, todo3]
