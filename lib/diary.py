@@ -15,19 +15,29 @@ class TodoList:
     def incomplete(self):
         # Returns:
         #   A list of Todo instances representing the todos that are not complete
-        pass
+        not_done_list = ??.appened(not_done)
+        return list(not_done_list)
+        
 
     def complete(self):
         # Returns:
         #   A list of Todo instances representing the todos that are complete
-        pass
+
+        done_list = ??.appened(done)
+        return list(done_list)
+        
 
     def give_up(self):
         # Returns:
         #   Nothing
         # Side-effects:
         #   Marks all todos as complete
-        pass
+
+        for False in self.task:
+            if False not in self.task:
+                return
+            else:
+                self.task.mark_complete()
 
 
 # File: lib/todo.py
@@ -45,6 +55,9 @@ class Todo:
         pass
 
     def mark_complete(self):
+
+
+        self.todoli
         # Returns:
         #   Nothing
         # Side-effects:
